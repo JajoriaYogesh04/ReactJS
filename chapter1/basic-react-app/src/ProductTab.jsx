@@ -6,7 +6,6 @@ function ProductTab(){
             <Product></Product>
             <Product></Product>
             <Product></Product>
-            <Product></Product>
         </>
     )
 }
