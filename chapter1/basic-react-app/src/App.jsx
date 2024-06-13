@@ -3,6 +3,7 @@ import './App.css'
 import Title_Rename from "./Title"
 import { Description, Description2 } from './Description'
 let name= "james"
+import ProductTab from './ProductTab'
 
 
 // function App() {
@@ -51,15 +52,23 @@ let name= "james"
 //   )
 // }
 
+// function App(){
+//   return(
+//     <>
+//       <h1>2 x 2 = {2*2}</h1>
+//       <p>Hello {name.toUpperCase()}</p>
+//       <h1>3 x 3 = {3*3}</h1>
+//       <p>Hello {name.toUpperCase()}</p>
+//       <h1>4 x 4 = {4*4}</h1>
+//       <p>Hello {name.toUpperCase()}</p>
+//     </>
+//   )
+// }
+
 function App(){
   return(
     <>
-      <h1>2 x 2 = {2*2}</h1>
-      <p>Hello {name.toUpperCase()}</p>
-      <h1>3 x 3 = {3*3}</h1>
-      <p>Hello {name.toUpperCase()}</p>
-      <h1>4 x 4 = {4*4}</h1>
-      <p>Hello {name.toUpperCase()}</p>
+      <ProductTab></ProductTab>
     </>
   )
 }
