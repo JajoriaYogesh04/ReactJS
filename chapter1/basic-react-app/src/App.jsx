@@ -1,16 +1,8 @@
+// Import
 import './App.css'
+import Title_Rename from "./Title"
+import { Description, Description2 } from './Description'
 
-function Title(){
-  return(
-    <h1>Hello I am Title!</h1>
-  )
-}
-
-function Description(){
-  return(
-    <h3>Hello I am Description!</h3>
-  )
-}
 
 // function App() {
 //   return(
@@ -34,12 +26,12 @@ function App() {
   return(
     <div>
       {/* <Title></Title> */}
-      <Title/>
+      <Title_Rename/>
       <Description></Description>
-      <Title/>
+      <Title_Rename/>
       <Description></Description>
-      <Title/>
-      <Description></Description>
+      <Title_Rename/>
+      <Description2></Description2>
     </div>
   )
 }
