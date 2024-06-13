@@ -22,9 +22,23 @@ import { Description, Description2 } from './Description'
 //   )
 // }
 
+// function App() {
+//   return(
+//     <div>
+//       {/* <Title></Title> */}
+//       <Title_Rename/>
+//       <Description></Description>
+//       <Title_Rename/>
+//       <Description></Description>
+//       <Title_Rename/>
+//       <Description2></Description2>
+//     </div>
+//   )
+// }
+
 function App() {
   return(
-    <div>
+    <>
       {/* <Title></Title> */}
       <Title_Rename/>
       <Description></Description>
@@ -32,7 +46,7 @@ function App() {
       <Description></Description>
       <Title_Rename/>
       <Description2></Description2>
-    </div>
+    </>
   )
 }
 
