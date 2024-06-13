@@ -2,6 +2,7 @@
 import './App.css'
 import Title_Rename from "./Title"
 import { Description, Description2 } from './Description'
+let name= "james"
 
 
 // function App() {
@@ -36,16 +37,29 @@ import { Description, Description2 } from './Description'
 //   )
 // }
 
-function App() {
+// function App() {
+//   return(
+//     <>
+//       {/* <Title></Title> */}
+//       <Title_Rename/>
+//       <Description></Description>
+//       <Title_Rename/>
+//       <Description></Description>
+//       <Title_Rename/>
+//       <Description2></Description2>
+//     </>
+//   )
+// }
+
+function App(){
   return(
     <>
-      {/* <Title></Title> */}
-      <Title_Rename/>
-      <Description></Description>
-      <Title_Rename/>
-      <Description></Description>
-      <Title_Rename/>
-      <Description2></Description2>
+      <h1>2 x 2 = {2*2}</h1>
+      <p>Hello {name.toUpperCase()}</p>
+      <h1>3 x 3 = {3*3}</h1>
+      <p>Hello {name.toUpperCase()}</p>
+      <h1>4 x 4 = {4*4}</h1>
+      <p>Hello {name.toUpperCase()}</p>
     </>
   )
 }
