@@ -4,6 +4,7 @@ import Title_Rename from "./Title"
 import { Description, Description2 } from './Description'
 let name= "james"
 import ProductTab from './ProductTab'
+import Message from './Message'
 
 
 // function App() {
@@ -65,10 +66,24 @@ import ProductTab from './ProductTab'
 //   )
 // }
 
+// function App(){
+//   return(
+//     <>
+//       <ProductTab></ProductTab>
+//     </>
+//   )
+// }
+
 function App(){
   return(
     <>
-      <ProductTab></ProductTab>
+      <Message Name="YOGESH" Color="violet"></Message>
+      <Message Name="ANUBHAV" Color="indigo"></Message>
+      <Message Name="RAHUL" Color="blue"></Message>
+      <Message Name="SUSHRUT" Color="green"></Message>
+      <Message Name="ADITYA" Color="yellow"></Message>
+      <Message Name="SHANU" Color="orange"></Message>
+      <Message Name="SACHIN" Color="red"></Message>
     </>
   )
 }
