@@ -20,12 +20,16 @@ import "./Product.css"
 //     )
 // }
 
-function Product({Title, price=1}){
-    // console.log(props)
+function Product({Title, price=1, features, features2={}, options, options2={}}){
+    console.log(features)
     return(
         <div className="Product">
             <h1>{Title}</h1>
             <h3>Price: {price}</h3>
+            <p>{features}</p>
+            <p>{features2.b}</p>
+            <p>{options}</p>
+            <p>{options2.a}</p>
         </div>
     )
 }
