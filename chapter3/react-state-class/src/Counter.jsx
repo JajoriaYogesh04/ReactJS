@@ -1,10 +1,12 @@
-
+import { useState } from "react";
 
 function Counter(){
-    let count = 0;
+    // let count = 0;
+    let [count, setCount] = useState(15);
+    // console.log(arr);
 
     function increaseCount(){
-        count+=1;
+        setCount(count+1)
         console.log(count)
     }
     return(
