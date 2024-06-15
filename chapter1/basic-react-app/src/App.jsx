@@ -6,6 +6,8 @@ let name= "james"
 import ProductTab from './ProductTab'
 import Message from './Message'
 
+import Button from './Button'
+
 
 // function App() {
 //   return(
@@ -92,11 +94,21 @@ import Message from './Message'
 
 // ACTIVITY 2
 
+// function App(){
+//   return(
+//     <>
+//       <h2 >Blockbuster Deals on Computer Accessories | Shop Now</h2  >
+//       <ProductTab></ProductTab>
+//     </>
+//   )
+// }
+
+// Chapter3
+
 function App(){
   return(
     <>
-      <h2 >Blockbuster Deals on Computer Accessories | Shop Now</h2  >
-      <ProductTab></ProductTab>
+      <Button></Button>
     </>
   )
 }
