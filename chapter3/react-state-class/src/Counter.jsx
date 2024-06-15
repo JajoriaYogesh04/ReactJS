@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Counter(){
     // let count = 0;
-    let [count, setCount] = useState(15);
+    let [count, setCount] = useState(0);
     // console.log(arr);
 
     function increaseCount(){
