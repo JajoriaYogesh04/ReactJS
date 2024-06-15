@@ -1,6 +1,10 @@
-function Title(){
+import "./Product.css"
+
+function Title({title}){
     return(
-        <h1>Hello I am Title!</h1>
+        <div className="Title">
+            <h3>{title}</h3>
+        </div>
     )
 }
 

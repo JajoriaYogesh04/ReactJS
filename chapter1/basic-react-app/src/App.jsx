@@ -74,16 +74,29 @@ import Message from './Message'
 //   )
 // }
 
+// ACTIVITY 1
+
+// function App(){
+//   return(
+//     <>
+//       <Message Name="YOGESH" Color="violet"></Message>
+//       <Message Name="ANUBHAV" Color="indigo"></Message>
+//       <Message Name="RAHUL" Color="blue"></Message>
+//       <Message Name="SUSHRUT" Color="green"></Message>
+//       <Message Name="ADITYA" Color="yellow"></Message>
+//       <Message Name="SHANU" Color="orange"></Message>
+//       <Message Name="SACHIN" Color="red"></Message>
+//     </>
+//   )
+// }
+
+// ACTIVITY 2
+
 function App(){
   return(
     <>
-      <Message Name="YOGESH" Color="violet"></Message>
-      <Message Name="ANUBHAV" Color="indigo"></Message>
-      <Message Name="RAHUL" Color="blue"></Message>
-      <Message Name="SUSHRUT" Color="green"></Message>
-      <Message Name="ADITYA" Color="yellow"></Message>
-      <Message Name="SHANU" Color="orange"></Message>
-      <Message Name="SACHIN" Color="red"></Message>
+      <h2 >Blockbuster Deals on Computer Accessories | Shop Now</h2  >
+      <ProductTab></ProductTab>
     </>
   )
 }

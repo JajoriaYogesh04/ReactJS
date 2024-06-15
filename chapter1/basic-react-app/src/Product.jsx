@@ -1,5 +1,6 @@
 import Title from "./Title";
 import { Description } from "./Description";
+import Price from "./Price";
 import "./Product.css"
 
 // function Product(){
@@ -88,14 +89,24 @@ import "./Product.css"
 //     )
 // }
 
-function Product({Title, price}){
-    let isDiscount= price>50000;
-    let styles = { backgroundColor : isDiscount ? "yellow" : ""};
+// function Product({Title, price}){
+//     let isDiscount= price>50000;
+//     let styles = { backgroundColor : isDiscount ? "yellow" : ""};
+//     return(
+//         <div className="Product" style={ styles }>
+//             <h1>{Title}</h1>
+//             <h3>Price: {price}</h3>
+//             {isDiscount && <p><i>Discount of 10%</i></p>}
+//         </div>
+//     )
+// }
+
+function Product({title, features=[], oldPrice, newPrice}){
     return(
-        <div className="Product" style={ styles }>
-            <h1>{Title}</h1>
-            <h3>Price: {price}</h3>
-            {isDiscount && <p><i>Discount of 10%</i></p>}
+        <div className="Product">
+            <Title title={title}></Title>
+            <h5>{features}</h5>
+            <Price oldPrice={oldPrice} newPrice={newPrice}></Price>
         </div>
     )
 }
