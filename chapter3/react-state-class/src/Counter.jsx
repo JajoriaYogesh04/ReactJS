@@ -4,10 +4,11 @@ function Counter(){
     // let count = 0;
     let [count, setCount] = useState(0);
     // console.log(arr);
+    console.log(`Outer: ${count}`)
 
     function increaseCount(){
         setCount(count+1)
-        console.log(count)
+        console.log(`Inner: ${count}`)
     }
     return(
         <>

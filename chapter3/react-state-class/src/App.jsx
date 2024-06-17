@@ -6,8 +6,8 @@ function App() {
 
   return (
     <>
-      {/* <Counter></Counter> */}
-      <Like></Like>
+      <Counter></Counter>
+      {/* <Like></Like> */}
     </>
   )
 }
