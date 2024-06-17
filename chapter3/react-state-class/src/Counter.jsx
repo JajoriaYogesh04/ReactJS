@@ -7,8 +7,16 @@ function Counter(){
     console.log(`Outer: ${count}`)
 
     function increaseCount(){
-        setCount(count+1)
-        console.log(`Inner: ${count}`)
+        setCount((currCount)=>{
+            console.log(`Current1: ${currCount}`);
+            return currCount+1;
+        });
+        // console.log(`Inner1: ${count}`);
+        setCount((currCount)=>{
+            console.log(`Current2: ${currCount}`);
+            return currCount+1;
+        });
+        // console.log(`Inner2: ${count}`);
     }
     return(
         <>
