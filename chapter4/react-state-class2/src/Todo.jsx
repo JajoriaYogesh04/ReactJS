@@ -29,6 +29,17 @@ function Todo(){
         })
     }
 
+    function upperCaseAll(){
+        // console.log("Updating all");
+        // let copy= todos.map((todo)=>({...todo, task: todo.task.toUpperCase()}))
+        // console.log(copy);
+        setTodos((prevTodo)=>{
+            return(
+                prevTodo.map((todo)=>({...todo, task: todo.task.toUpperCase()}))
+            ) 
+        })
+    }
+
     return(
         <>
             <h2>TO-DO List</h2>
@@ -50,6 +61,8 @@ function Todo(){
                     })
                 }
             </ul>
+            <br />
+            <button onClick={upperCaseAll} style={{fontSize:"15px", borderRadius:"0px"}}>To UPPERCASE</button>
         </>
     )
 }
