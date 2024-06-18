@@ -40,6 +40,21 @@ function Todo(){
         })
     }
 
+    function lowerCaseOne(id){
+        // console.log("LowerCase One");
+        // console.log(id);
+        setTodos((prevTodo)=>{
+            return prevTodo.map((todo)=>{
+                if(todo.id === id){
+                    return {...todo, task: todo.task.toLowerCase()};
+                }
+                else{
+                    return todo;
+                }
+            })
+        })
+    }
+
     return(
         <>
             <h2>TO-DO List</h2>
@@ -55,6 +70,7 @@ function Todo(){
                                 <span>
                                     {todo.task}&nbsp;&nbsp;
                                     <button onClick={()=>{deleteTodo(todo.id)}} style={{marginBottom:"0.5rem", fontSize:"12px", marginLeft:"1rem", borderRadius:"20px"}}>Delete</button>
+                                    <button onClick={()=>{lowerCaseOne(todo.id)}} style={{marginBottom:"0.5rem", fontSize:"12px", marginLeft:"1rem", borderRadius:"20px"}}>Lowercase</button>
                                 </span>
                             </li>
                         ) 
