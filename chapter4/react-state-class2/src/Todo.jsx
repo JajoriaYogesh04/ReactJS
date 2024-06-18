@@ -14,8 +14,19 @@ function Todo(){
 
     function updateTodo(){
         // console.log("Adding new Task")
-        setTodos([...todos, {task: newTodo, id: uuidv4()}]);
+        setTodos((prevTodo)=>{
+            return [...prevTodo, {task: newTodo, id: uuidv4()}]
+        });
         setNewtodo("");
+    }
+
+    function deleteTodo(id){
+        // console.log(id);
+        // let copy= todos.filter((todo)=> todo.id != id)
+        // console.log(copy)
+        setTodos((prevTodo)=>{
+            return prevTodo.filter((todo)=> todo.id != id);
+        })
     }
 
     return(
@@ -25,15 +36,20 @@ function Todo(){
             <br /><br />
             <button onClick={updateTodo}>Add Task</button>
             <br />
-            <div>
-                <ul>
-                    {
-                        todos.map((todo)=>{
-                            return <li key={todo.id}>{todo.task}</li>
-                        })
-                    }
-                </ul>
-            </div>
+            <ul>
+                {
+                    todos.map((todo)=>{
+                        return(
+                            <li key={todo.id}>
+                                <span>
+                                    {todo.task}&nbsp;&nbsp;
+                                    <button onClick={()=>{deleteTodo(todo.id)}} style={{marginBottom:"0.5rem", fontSize:"12px", marginLeft:"1rem", borderRadius:"20px"}}>Delete</button>
+                                </span>
+                            </li>
+                        ) 
+                    })
+                }
+            </ul>
         </>
     )
 }
