@@ -5,6 +5,7 @@
     width: 35rem;
     border: 5px solid black;
     border-radius: 20px;
+    margin: 1rem;
 }
 
 .lottery-ticket button{
