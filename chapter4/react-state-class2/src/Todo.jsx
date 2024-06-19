@@ -90,7 +90,9 @@ function Todo(){
                         return(
                             <li key={todo.id}>
                                 <span>
-                                    <span style={{textDecoration: todo.isDone ? "line-through" : ""}}>
+                                    <span style={{color: todo.isDone ? "green" : "white",
+                                    textDecoration: todo.isDone ? "line-through" : "none",
+                                    fontStyle: todo.isDone ? "italic" : "normal"}}>
                                         {todo.task}
                                     </span>
                                     &nbsp;&nbsp;
