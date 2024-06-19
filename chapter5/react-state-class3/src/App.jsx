@@ -12,7 +12,7 @@ function App() {
     <>
       {/* <LotteryGame1></LotteryGame1> */}
       {/* <LotteryGame></LotteryGame> */}
-      <Ticket></Ticket>
+      <Ticket ticket={[1,2,3,5,6,7,8]}></Ticket>
     </>
   )
 }
