@@ -1,17 +1,16 @@
 import { useState } from "react";
 import { getLotnum, sumArr} from "./helper";
-import "./LotteryGame.css"
-import Ticket from "./Ticket";
+import "./LotteryGame2.css"
 
-function LotteryGame({n=3, total=15}){
+function LotteryGame2(){
     let [Lottery, setLottery]= useState({Lotnum: [], win: false});  
 
     function getNewTicket(){
-        let numArr= getLotnum(n);
+        let numArr= getLotnum(5);
         // console.log(numArr);
         let sum= sumArr(numArr);
         // console.log(sum);
-        if(sum == total){
+        if(sum == 15){
             setLottery({Lotnum: numArr, win: true});
         }
         else{
@@ -22,10 +21,11 @@ function LotteryGame({n=3, total=15}){
     return(
         <div className="lottery-ticket">
             <h1>{ Lottery.win ? `CONGRATULATION...\nYOU WON!!` : "LOTTERY" }</h1>
-            <Ticket ticket={Lottery.Lotnum}></Ticket>
+            <h2>Lottery Ticket</h2>
+            <h1>{ Lottery.Lotnum }</h1>
             <button onClick={getNewTicket}>Get New Ticket</button>
         </div>
     )
 }
 
-export default LotteryGame;
+export default LotteryGame2;
