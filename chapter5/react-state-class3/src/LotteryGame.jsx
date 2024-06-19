@@ -6,7 +6,7 @@ function LotteryGame(){
     let [Lottery, setLottery]= useState({Lotnum: [], win: false});  
 
     function getNewTicket(){
-        let numArr= getLotnum(3);
+        let numArr= getLotnum(5);
         // console.log(numArr);
         let sum= sumArr(numArr);
         // console.log(sum);
