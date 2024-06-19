@@ -1,0 +1,16 @@
+.lottery-ticket{
+    background-color: white;
+    color: black;
+    height: 25rem;
+    width: 35rem;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.lottery-ticket button{
+    height: 3rem;
+    width: 15rem;
+    border-radius: 0px;
+    background-color: green;
+    font-weight: 700;
+}
