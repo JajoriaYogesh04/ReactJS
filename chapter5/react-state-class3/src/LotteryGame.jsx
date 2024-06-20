@@ -2,6 +2,7 @@ import { useState } from "react";
 import { getLotnum, sumArr} from "./helper";
 import "./LotteryGame.css"
 import Ticket from "./Ticket";
+import Button from "./Button";
 
 function LotteryGame({n=3, winCondition}){
     let [Lottery, setLottery]= useState({Lotnum: [], win: false});  
@@ -24,7 +25,7 @@ function LotteryGame({n=3, winCondition}){
         <div className="lottery-ticket">
             <h1>{ Lottery.win ? `CONGRATULATION...\nYOU WON!!` : "LOTTERY" }</h1>
             <Ticket ticket={Lottery.Lotnum}></Ticket>
-            <button onClick={getNewTicket}>Get New Ticket</button>
+            <Button action={getNewTicket}></Button>
         </div>
     )
 }

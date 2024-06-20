@@ -11,8 +11,8 @@ import Ticket from './Ticket'
 function App() {
 
   let winCondition= (ticket)=>{
-    // return sumArr(ticket)===25;
-    return ticket.every((num)=> num===ticket[0]);
+    return sumArr(ticket)===15;
+    // return ticket.every((num)=> num===ticket[0]);
   }
 
   return (
