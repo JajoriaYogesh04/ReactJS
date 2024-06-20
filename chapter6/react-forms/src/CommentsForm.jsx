@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function CommentsForm(){
+export default function CommentsForm({addNewComment}){
     let [formData, setFormData]= useState({
         username: "",
         remarks: "",
@@ -16,6 +16,7 @@ export default function CommentsForm(){
     let handleFormSubmit=(event)=>{
         event.preventDefault();
         console.log(formData);
+        addNewComment(formData);
         setFormData({
             username: "",
             remarks: "",
@@ -27,7 +28,7 @@ export default function CommentsForm(){
         <div style={{backgroundColor:"black", padding:"5rem", border:"5px solid #19D3DA"}}>
             <h2>Give a Comment!</h2>
             <form onSubmit={handleFormSubmit}>
-                <label htmlFor="username">Uaername: </label><br />
+                <label htmlFor="username">Username: </label><br />
                 <input type="text" onChange={handleInputChange} name="username" value={formData.username} id="username" placeholder="Enter Username" style={{height:"1.5rem", width:"25rem"}}/><br /><br />
                 <label htmlFor="remarks">Remarks: </label><br />
                 <textarea onChange={handleInputChange} name="remarks" value={formData.remarks} id="remarks" placeholder="Enter Reviews..." style={{height:"3rem", width:"25rem"}}></textarea><br /><br />
