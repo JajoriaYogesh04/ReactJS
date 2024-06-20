@@ -17,7 +17,7 @@ export default function Form(){
     //     // console.log(event.target.value);
     //     setUsername(event.target.value)
     // }
-    let changeFormData= (event)=>{
+    let handleInputChange= (event)=>{
         // console.log(event.target.name);
         // console.log(event.target.value);
         // let fieldName= event.target.name;
@@ -45,11 +45,11 @@ export default function Form(){
         <h1>REACT FORMS</h1>
         <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name: </label>
-            <input type="text" value={formData.name} name='name' onChange={changeFormData} id='name' placeholder='Enter your name' style={{height:"1.5rem", width:"25rem"}}/><br/><br/>
+            <input type="text" value={formData.name} name='name' onChange={handleInputChange} id='name' placeholder='Enter your name' style={{height:"1.5rem", width:"25rem"}}/><br/><br/>
             <label htmlFor="username">Username: </label>
-            <input type="text" value={formData.username} name='username' onChange={changeFormData} id='username' placeholder='Enter your username' style={{height:"1.5rem", width:"25rem"}}/><br/><br/>
+            <input type="text" value={formData.username} name='username' onChange={handleInputChange} id='username' placeholder='Enter your username' style={{height:"1.5rem", width:"25rem"}}/><br/><br/>
             <label htmlFor="password">Password: </label>
-            <input type="password" value={formData.password} name='password' onChange={changeFormData} id='username' placeholder='Enter password' style={{height:"1.5rem", width:"25rem"}}/><br/><br/>
+            <input type="password" value={formData.password} name='password' onChange={handleInputChange} id='password' placeholder='Enter password' style={{height:"1.5rem", width:"25rem"}}/><br/><br/>
             <button>Submit</button>
         </form>
         </>
