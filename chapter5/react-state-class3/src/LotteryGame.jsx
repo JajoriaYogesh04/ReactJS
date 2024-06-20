@@ -3,15 +3,16 @@ import { getLotnum, sumArr} from "./helper";
 import "./LotteryGame.css"
 import Ticket from "./Ticket";
 
-function LotteryGame({n=3, total=15}){
+function LotteryGame({n=3, winCondition}){
     let [Lottery, setLottery]= useState({Lotnum: [], win: false});  
 
     function getNewTicket(){
         let numArr= getLotnum(n);
         // console.log(numArr);
-        let sum= sumArr(numArr);
+        // let sum= sumArr(numArr);
         // console.log(sum);
-        if(sum == total){
+        // console.log(winCondition);
+        if(winCondition(numArr)){
             setLottery({Lotnum: numArr, win: true});
         }
         else{
