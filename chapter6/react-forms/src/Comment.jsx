@@ -15,7 +15,7 @@ export default function Comment(){
     return(
         <div>
             {comments.map((comment, idx)=>(
-                <div key={idx} style={{border:"5px solid #19D3DA", backgroundColor:"black", margin:"1rem 0rem 1rem 0rem"}}>
+                <div key={idx} style={{border:"5px solid #19D3DA", backgroundColor:"black", margin:"1rem 0rem 1rem 0rem", borderRadius:"25px"}}>
                     <p>{comment.remarks}</p>
                     <p>~{comment.username}&nbsp;<i>({comment.rating})</i></p>
                 </div>  
