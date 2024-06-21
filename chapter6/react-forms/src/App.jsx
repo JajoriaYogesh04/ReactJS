@@ -4,13 +4,15 @@ import Form from './Form'
 import CommentsForm from './CommentsForm'
 import Comment from './Comment'
 import Counter from './Counter'
+import Joker from './Joker'
 
 function App() {
   return(
     // <Form></Form>
     // <CommentsForm></CommentsForm>
     // <Comment></Comment>
-    <Counter></Counter>
+    // <Counter></Counter>
+    <Joker></Joker>
   )
 }
 

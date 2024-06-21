@@ -12,7 +12,7 @@ export default function Counter(){
     }
     useEffect(function printSomething(){
         console.log("I am useEffect");
-    },[])
+    },[countx])
 
     return(
         <div>
