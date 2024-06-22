@@ -4,7 +4,7 @@ import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import { useState } from 'react';
 
 
-export default function SearchBox(){
+export default function SearchBox({search}){
     let [city, setCity]= useState("");
 
     const API_URL="https://api.openweathermap.org/data/2.5/weather";
@@ -13,7 +13,7 @@ export default function SearchBox(){
     let getWeatherInfo= async()=>{
         let response= await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
         let jsonResponse= await response.json();
-        console.log(jsonResponse);
+        // console.log(jsonResponse);
         let weatherInfo= {
             city: city,
             temp: jsonResponse.main.temp,
@@ -23,17 +23,20 @@ export default function SearchBox(){
             feels_like: jsonResponse.main.feels_like,
             description: jsonResponse.weather[0].description,
         }
-        console.log(weatherInfo);
+        // console.log(weatherInfo);
+        // search(weatherInfo);
+        return weatherInfo;
     }
 
     let handleCity=(event)=>{
         // console.log(event.target.value)
         setCity(event.target.value)
     }
-    let handleSubmit=(event)=>{
+    let handleSubmit=async(event)=>{
         event.preventDefault();
-        console.log(city);
-        getWeatherInfo();
+        // console.log(city);
+        let result= await getWeatherInfo();
+        search(result);
         setCity("");
     }
 

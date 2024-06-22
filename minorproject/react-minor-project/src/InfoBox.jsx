@@ -5,16 +5,16 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 
-export default function InfoBox(){
-    let info={
-        city: "Delhi",
-        description: "haze",
-        feels_like: 37.74,
-        humidity: 55,
-        temp: 32.05,
-        temp_max: 32.05,
-        temp_min: 32.05,
-    }
+export default function InfoBox({info}){
+    // let info={
+    //     city: "Delhi",
+    //     description: "haze",
+    //     feels_like: 37.74,
+    //     humidity: 55,
+    //     temp: 32.05,
+    //     temp_max: 32.05,
+    //     temp_min: 32.05,
+    // }
     return(
         <div>
             <div style={{ display:"flex", justifyContent:"center", textAlign:"center"}}>
