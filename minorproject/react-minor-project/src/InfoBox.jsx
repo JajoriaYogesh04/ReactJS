@@ -16,9 +16,8 @@ export default function InfoBox(){
         temp_min: 32.05,
     }
     return(
-        <div >
-            <h1>Weather: {info.description}</h1>
-            <div style={{ display:"flex", justifyContent:"center", textAlign:"left"}}>
+        <div>
+            <div style={{ display:"flex", justifyContent:"center", textAlign:"center"}}>
                 <Card sx={{ maxWidth: 345 }}>
                     <CardActionArea>
                         <CardMedia

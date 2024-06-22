@@ -38,8 +38,7 @@ export default function SearchBox(){
     }
 
     return(
-        <div>
-            <h1>Search for the weather!</h1>
+        <div style={{margin:"2rem"}}>
             <form onSubmit={handleSubmit}>
                 <TextField id="city" name='city' value={city} onChange={handleCity} label="City Name" variant="outlined" required style={{width:"25rem"}}/><br /><br />
                 <Button type="submit" variant="outlined" startIcon={<SearchRoundedIcon />}>Search</Button>
