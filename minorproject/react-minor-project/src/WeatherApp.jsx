@@ -19,7 +19,7 @@ export default function WeatherApp(){
     }
 
     return(
-        <div>
+        <div style={{backgroundColor:"#c5dbe3", padding:"1rem"}}>
             <h1>SkyCast</h1> 
             <SearchBox search={getCityWeather}></SearchBox>
             <InfoBox info={cityWeather}></InfoBox>
