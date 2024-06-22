@@ -4,6 +4,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
+import WbSunnyTwoToneIcon from '@mui/icons-material/WbSunnyTwoTone';
+import ThunderstormTwoToneIcon from '@mui/icons-material/ThunderstormTwoTone';
+import AcUnitTwoToneIcon from '@mui/icons-material/AcUnitTwoTone';
+
 
 export default function InfoBox({info}){
 
@@ -32,8 +36,9 @@ export default function InfoBox({info}){
                             alt="green iguana"
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                <b>{info.city}</b>
+                            <Typography gutterBottom variant="h5" component={"span"}>
+                                <p><b>{info.city}&nbsp;{info.humidity > 80 ? <ThunderstormTwoToneIcon/> : info.temp < 15 ? <AcUnitTwoToneIcon/> : <WbSunnyTwoToneIcon/>}</b></p>
+                                
                             </Typography>
                             <Typography variant="body2" color="text.secondary" component={"span"}>
                                 <p>Temperature: <b>{info.temp}&deg;C</b></p>

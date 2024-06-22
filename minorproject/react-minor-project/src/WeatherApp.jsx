@@ -4,13 +4,13 @@ import { useState } from "react"
 
 export default function WeatherApp(){
     let [cityWeather, setCityWeather]= useState({
-        city: "Delhi",
-        description: "hazeeee",
-        feels_like: 37.74,
-        humidity: 55,
-        temp: 32.05,
-        temp_max: 32.05,
-        temp_min: 32.05,
+        city: "--",
+        description: "--",
+        feels_like: 0,
+        humidity: 0,
+        temp: 0,
+        temp_max: 0,
+        temp_min: 0,
     });
 
     let getCityWeather=(result)=>{
