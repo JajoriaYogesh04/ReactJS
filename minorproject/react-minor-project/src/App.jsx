@@ -2,6 +2,7 @@
 import './App.css'
 import Mui from './Mui'
 import SearchBox from './SearchBox'
+import InfoBox from './InfoBox'
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
     <>
       {/* <Mui></Mui> */}
       <SearchBox></SearchBox>
+      <InfoBox></InfoBox>
     </>
   )
 }
