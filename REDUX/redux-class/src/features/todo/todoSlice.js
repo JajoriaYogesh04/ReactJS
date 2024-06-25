@@ -9,7 +9,7 @@ const initialState= {
 }
 
 export const todoSlice= createSlice({
-    name: "todoSlice",
+    name: "todo",
     initialState,
     reducers: {
         addTodo: (state, action)=>{
