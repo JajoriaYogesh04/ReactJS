@@ -1,7 +1,10 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux";
+import { addTodo } from "../features/todo/todoSlice";
 
 export default function AddTodo(){
     let [task, setTask]= useState("");
+    let dispatch= useDispatch();
 
     let handleInputChange=(event)=>{
         // console.log(event.target.value);
@@ -11,6 +14,7 @@ export default function AddTodo(){
     let handleSubmit=(event)=>{
         event.preventDefault();
         console.log(task);
+        dispatch(addTodo(task))
         setTask("");
     }
 
