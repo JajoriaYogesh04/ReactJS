@@ -16,16 +16,16 @@ export const todoSlice= createSlice({
             let newTodo={
                 id: nanoid(),
                 task: action.payload,
-                isDone: true,
+                isDone: false,
             }
             state.todos.push(newTodo);
         },
         deleteTodo: (state, action)=>{
-            state.todos.filter((todo)=> todo.id !== action.payload )
+            state.todos= state.todos.filter((todo)=> todo.id !== action.payload)
         },
         markasDone: (state, action)=>{
             state.todos.map((todo)=>{
-                if(todo.id === action.payload){
+                if(todo.id === action.payload){ 
                     todo.isDone = true;
                 }
             })

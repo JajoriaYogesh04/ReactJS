@@ -13,7 +13,7 @@ export default function AddTodo(){
 
     let handleSubmit=(event)=>{
         event.preventDefault();
-        console.log(task);
+        // console.log(task);
         dispatch(addTodo(task))
         setTask("");
     }
@@ -22,7 +22,7 @@ export default function AddTodo(){
         <>
             <form onSubmit={handleSubmit}>
                 <input type="text" value={task} onChange={handleInputChange} placeholder="Add Task..." style={{height:"2rem", width:"25rem", fontSize:"1.25rem"}}/><br /><br />
-                <button type="submit">Add Task</button>
+                <button type="submit" style={{backgroundColor:"green", border:"2px solid black", borderRadius:"0px"}}>Add Task</button>
             </form>
         </>
     )
