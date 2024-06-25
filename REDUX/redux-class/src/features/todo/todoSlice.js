@@ -33,3 +33,6 @@ export const todoSlice= createSlice({
     }
 })
 
+export const {addTodo, deleteTodo, markasDone}= todoSlice.actions;
+export default todoSlice.reducer;
+
