@@ -25,9 +25,9 @@ export default function Todo(){
             <AddTodo></AddTodo>
             <ul>
                 {todos.map((todo)=>(
-                    <li key={todo.id} style={todo.isDone ? {backgroundColor:"green"}: {backgroundColor:"red"}}>{todo.task}&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button onClick={()=>handleDelete(todo.id)} style={{backgroundColor:"red", border:"2px solid black", borderRadius:"0px", margin:"0.5rem"}}>Delete</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button onClick={()=>handleDone(todo.id)} style={{backgroundColor:"blue", border:"2px solid black", borderRadius:"0px", margin:"0.5rem"}}>Done</button>
+                    <li key={todo.id} style={todo.isDone ? {backgroundColor:"#27b376"}: {backgroundColor:"#f9a73e", color:"black"}}>{todo.task}&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button onClick={()=>handleDelete(todo.id)} style={{backgroundColor:"#bf212f", border:"2px solid black", borderRadius:"0px", margin:"0.5rem"}}>Delete</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button onClick={()=>handleDone(todo.id)} style={{backgroundColor:"#264b96", border:"2px solid black", borderRadius:"0px", margin:"0.5rem"}}>Done</button>
                     </li>
                 ))}
             </ul>
